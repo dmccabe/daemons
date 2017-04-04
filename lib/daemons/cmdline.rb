@@ -25,6 +25,10 @@ module Daemons
           @options[:no_wait] = t
         end
 
+        opt.on('-w', '--force_kill_waittime N', 'Number of seconds to wait for processes to stop before force killing them') do |n|
+          @options[:force_kill_waittime] = n
+        end
+
         opts.separator ''
         opts.separator 'Common options:'
 
@@ -49,6 +53,7 @@ module Daemons
             -t, --ontop                      Stay on top (does not daemonize)
             -f, --force                      Force operation
             -n, --no_wait                    Do not wait for processes to stop
+            -w, --force_kill_waittime        Number of seconds to wait for processes to stop before force killing them
 
         Common options:
             -h, --help                       Show this message
