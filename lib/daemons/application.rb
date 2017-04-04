@@ -31,7 +31,6 @@ module Daemons
       @dir_mode = @dir = @script = nil
 
       @force_kill_waittime = @options[:force_kill_waittime] || 20
-      Rails.logger.info("Force kill wait time set to #{@force_kill_waittime} seconds")
 
       @show_status_callback = method(:default_show_status)
 

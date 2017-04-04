@@ -25,7 +25,7 @@ module Daemons
           @options[:no_wait] = t
         end
 
-        opt.on('-w', '--force_kill_waittime N', 'Number of seconds to wait for processes to stop before force killing them') do |n|
+        opts.on('-w', '--force_kill_waittime N', 'Number of seconds to wait for processes to stop before force killing them') do |n|
           @options[:force_kill_waittime] = n
         end
 
